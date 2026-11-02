@@ -60,7 +60,7 @@ nav{
 .player .mood{font-size:12px;color:var(--sub);margin-top:2px}
 .player .bars{display:flex;align-items:flex-end;gap:3px;height:26px;margin:16px 0 4px}
 .player .bars i{flex:1;background:var(--ink);border-radius:2px;opacity:.85;height:20%}
-.player.playing .bars i{animation:eq 1s ease-in-out infinite}
+.player .bars.live i{animation:eq 1s ease-in-out infinite}
 .player .bars i:nth-child(2){animation-delay:.15s}
 .player .bars i:nth-child(3){animation-delay:.3s}
 .player .bars i:nth-child(4){animation-delay:.45s}
@@ -427,9 +427,9 @@ footer{border-top:1px solid var(--line2);padding:56px clamp(20px,6vw,80px) 40px;
 
 <div class="player" id="player">
   <h4>Now playing <button class="x" id="playerClose" aria-label="Close player">âœ•</button></h4>
-  <div class="now" id="trackName">I Understand â€” Drake</div>
-  <div class="mood" id="trackMood">via YouTube Â· plays in the embedded player below</div>
-  <div id="ytFrame"></div>
+  <div class="now" id="trackName">I Understand — Drake</div>
+  <div class="mood" id="trackMood">via YouTube · track 1 of 3</div>
+  <div class="bars" id="eqBars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="prow">
     <button class="pbtn" id="prevBtn" aria-label="Previous track" title="Previous">
       <svg width="13" height="13" viewBox="0 0 20 20" fill="currentColor"><path d="M5 3h2v14H5zM17 3v14L7 10z"/></svg>
@@ -440,8 +440,10 @@ footer{border-top:1px solid var(--line2);padding:56px clamp(20px,6vw,80px) 40px;
     <button class="pbtn" id="nextBtn" aria-label="Next track" title="Next">
       <svg width="13" height="13" viewBox="0 0 20 20" fill="currentColor"><path d="M13 3h2v14h-2zM3 3l10 7-10 7z"/></svg>
     </button>
+    <input type="range" id="volSlider" min="0" max="100" value="60" aria-label="Volume">
   </div>
-  <div class="fine">Tracks stream from YouTube. Playback controls live in the video frame.</div>
+  <div id="ytFrame"></div>
+  <div class="fine">Tracks stream from YouTube. Video stays visible — that's how the embed works.</div>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -710,6 +712,8 @@ var prevBtn = document.getElementById("prevBtn");
 var nextBtn = document.getElementById("nextBtn");
 var trackName = document.getElementById("trackName");
 var trackMood = document.getElementById("trackMood");
+var volSlider = document.getElementById("volSlider");
+var eqBars = document.getElementById("eqBars");
 
 var TRACKS = [
   {id:"V-iPACQl1xE", name:"I Understand", artist:"Drake"},
@@ -744,7 +748,10 @@ function mountPlayer(){
       videoId: id,
       playerVars: {rel:0, modestbranding:1},
       events: {
-        onReady: function(e){ e.target.playVideo(); },
+        onReady: function(e){
+          e.target.setVolume(volSlider.value);
+          e.target.playVideo();
+        },
         onStateChange: function(e){ refreshPlayIcon(); }
       }
     });
@@ -782,7 +789,15 @@ nextBtn.addEventListener("click", function(){
 document.addEventListener("keydown", function(e){
   if(e.key === "Escape") player.classList.remove("open");
 });
-setInterval(refreshPlayIcon, 500);
+volSlider.addEventListener("input", function(){
+  if(ytPlayer){ try{ ytPlayer.setVolume(volSlider.value); }catch(e){} }
+});
+setInterval(function(){
+  refreshPlayIcon();
+  // EQ bars animate only while audio actually plays
+  var on = isPlaying();
+  eqBars.classList.toggle("live", on);
+}, 500);
 showTrack();
 
 /* ---------- interactivity: nav, menu, modal, toast, reveal ---------- */
