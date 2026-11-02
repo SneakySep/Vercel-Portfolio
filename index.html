@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>J._seph — IT Portfolio</title>
+<title>J._seph â€” IT Portfolio</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%23111' d='M10 0h4v13c0 3-2 5-5 5s-5-2-5-5h4c0 1 1 2 1 2s1 0 1-2V0z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +66,9 @@ nav{
 .player .bars i:nth-child(4){animation-delay:.45s}
 .player .bars i:nth-child(5){animation-delay:.6s}
 @keyframes eq{0%,100%{height:22%}50%{height:95%}}
-.player .prow{display:flex;align-items:center;gap:8px;margin-top:12px;min-width:0}
+.player .prow{display:flex;align-items:center;gap:8px;margin-top:12px;min-width:0;justify-content:center}
+#ytFrame{margin-top:14px;border-radius:12px;overflow:hidden;background:#000;aspect-ratio:16/9}
+#ytFrame iframe{width:100%;height:100%;display:block;border:0}
 .player .pbtn{
   width:34px;height:34px;border-radius:50%;border:none;cursor:pointer;flex-shrink:0;
   background:var(--pill-bg);color:var(--pill-fg);display:flex;align-items:center;justify-content:center;
@@ -312,12 +314,12 @@ footer{border-top:1px solid var(--line2);padding:56px clamp(20px,6vw,80px) 40px;
   <div class="scroll-hint" data-goto="#about">Scroll</div>
 
   <div class="logos">
-    <span class="logo" data-toast="VS Code — my daily driver for scripting and tooling."><svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor"><path d="M3 15c0-7 5-12 14-12-1 9-6 14-13 13l-1 2-2-1z"/></svg>Vscode</span>
-    <span class="logo" data-toast="LLMs — using AI tools for research and problem-solving."><svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l8 4.5v9L10 19l-8-4.5v-9zM10 6l-4 2.3v4.4L10 15l4-2.3V8.3z"/></svg>LLM</span>
-    <span class="logo" data-toast="Deepseek — AI-assisted analysis and coding."><svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor"><path d="M1 5q4.5-3 9 0t9 0v3q-4.5 3-9 0t-9 0zm0 7q4.5-3 9 0t9 0v3q-4.5 3-9 0t-9 0z"/></svg>Deepseek</span>
-    <span class="logo" data-toast="MS Office — documentation, reports and presentations."><svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1a9 9 0 110 18 9 9 0 010-18zm0 3a6 6 0 100 12 6 6 0 000-12zm0 3a3 3 0 110 6 3 3 0 010-6z"/></svg>MS Office</span>
-    <span class="logo" data-toast="MS Excel — data analysis, logs and reporting."><svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor"><path d="M1 17L7 6l3 5 3-7 6 13z"/></svg>MS Excel</span>
-    <span class="logo" data-toast="Troubleshooting — diagnosing systems until they behave."><svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l9 4-9 4-9-4zm-9 8l9 4 9-4v3l-9 4-9-4zm0 5l9 4 9-4v2l-9 4-9-4z"/></svg>Troubleshooting</span>
+    <span class="logo" data-toast="VS Code â€” my daily driver for scripting and tooling."><svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor"><path d="M3 15c0-7 5-12 14-12-1 9-6 14-13 13l-1 2-2-1z"/></svg>Vscode</span>
+    <span class="logo" data-toast="LLMs â€” using AI tools for research and problem-solving."><svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l8 4.5v9L10 19l-8-4.5v-9zM10 6l-4 2.3v4.4L10 15l4-2.3V8.3z"/></svg>LLM</span>
+    <span class="logo" data-toast="Deepseek â€” AI-assisted analysis and coding."><svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor"><path d="M1 5q4.5-3 9 0t9 0v3q-4.5 3-9 0t-9 0zm0 7q4.5-3 9 0t9 0v3q-4.5 3-9 0t-9 0z"/></svg>Deepseek</span>
+    <span class="logo" data-toast="MS Office â€” documentation, reports and presentations."><svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1a9 9 0 110 18 9 9 0 010-18zm0 3a6 6 0 100 12 6 6 0 000-12zm0 3a3 3 0 110 6 3 3 0 010-6z"/></svg>MS Office</span>
+    <span class="logo" data-toast="MS Excel â€” data analysis, logs and reporting."><svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor"><path d="M1 17L7 6l3 5 3-7 6 13z"/></svg>MS Excel</span>
+    <span class="logo" data-toast="Troubleshooting â€” diagnosing systems until they behave."><svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l9 4-9 4-9-4zm-9 8l9 4 9-4v3l-9 4-9-4zm0 5l9 4 9-4v2l-9 4-9-4z"/></svg>Troubleshooting</span>
   </div>
 </section>
 
@@ -326,9 +328,9 @@ footer{border-top:1px solid var(--line2);padding:56px clamp(20px,6vw,80px) 40px;
   <h2 class="reveal">I like cybersecurity stuff.</h2>
   <p class="lede reveal">I'm a 4th-year Information Technology student specialising in security. My focus is to know more about cybersecurity and its applications. I'm eager to know more about other fields, and I'm always looking to expand my knowledge.</p>
   <div class="cards">
-    <div class="card reveal"><div class="ico"><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l9 4-9 4-9-4zm-9 8l9 4 9-4v3l-9 4-9-4z"/></svg></div><h3>Building Sites</h3><p>Designing and building websites from scratch — HTML, CSS and JavaScript, other frameworks, Also templates.</p></div>
+    <div class="card reveal"><div class="ico"><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l9 4-9 4-9-4zm-9 8l9 4 9-4v3l-9 4-9-4z"/></svg></div><h3>Building Sites</h3><p>Designing and building websites from scratch â€” HTML, CSS and JavaScript, other frameworks, Also templates.</p></div>
     <div class="card reveal"><div class="ico"><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1a9 9 0 110 18 9 9 0 010-18zm0 3a6 6 0 100 12 6 6 0 000-12z"/></svg></div><h3>Defensive thinking</h3><p>Hardening, monitoring and incident response fundamentals. I build the defence so it can withstand attacks.</p></div>
-    <div class="card reveal"><div class="ico"><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M1 17L7 6l3 5 3-7 6 13z"/></svg></div><h3>Finding Solutions</h3><p>When something breaks, I debug it to the root cause — then document the fix so the next person doesn't hit the same wall.</p></div>
+    <div class="card reveal"><div class="ico"><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M1 17L7 6l3 5 3-7 6 13z"/></svg></div><h3>Finding Solutions</h3><p>When something breaks, I debug it to the root cause â€” then document the fix so the next person doesn't hit the same wall.</p></div>
   </div>
 </section>
 
@@ -337,10 +339,10 @@ footer{border-top:1px solid var(--line2);padding:56px clamp(20px,6vw,80px) 40px;
   <h2 class="reveal">The toolkit I'm building on.</h2>
   <p class="lede reveal">A working set, not a wall of logos. Each of these I've used in Creating Sites, Learning and Projects.</p>
   <div class="market">
-    <div class="tile reveal" data-toast="Visual Studio Code — coding, debugging and version control."><div class="bar"></div><div class="name">Visual Studio Code</div><div class="meta">Code · Debugging · Version control</div></div>
-    <div class="tile reveal" data-toast="Web application security — OWASP Top 10, manual testing."><div class="bar"></div><div class="name">Web app security</div><div class="meta">OWASP Top 10</div></div>
-    <div class="tile reveal" data-toast="LLMs — Deepseek, GLM and Qwen for research and problem-solving."><div class="bar"></div><div class="name">LLM</div><div class="meta">Deepseek · GLM · Qwen</div></div>
-    <div class="tile reveal" data-toast="Systems and hardening — Windows administration, secure configs."><div class="bar"></div><div class="name">Systems &amp; hardening</div><div class="meta">Windows · secure config</div></div>
+    <div class="tile reveal" data-toast="Visual Studio Code â€” coding, debugging and version control."><div class="bar"></div><div class="name">Visual Studio Code</div><div class="meta">Code Â· Debugging Â· Version control</div></div>
+    <div class="tile reveal" data-toast="Web application security â€” OWASP Top 10, manual testing."><div class="bar"></div><div class="name">Web app security</div><div class="meta">OWASP Top 10</div></div>
+    <div class="tile reveal" data-toast="LLMs â€” Deepseek, GLM and Qwen for research and problem-solving."><div class="bar"></div><div class="name">LLM</div><div class="meta">Deepseek Â· GLM Â· Qwen</div></div>
+    <div class="tile reveal" data-toast="Systems and hardening â€” Windows administration, secure configs."><div class="bar"></div><div class="name">Systems &amp; hardening</div><div class="meta">Windows Â· secure config</div></div>
   </div>
 </section>
 
@@ -348,10 +350,10 @@ footer{border-top:1px solid var(--line2);padding:56px clamp(20px,6vw,80px) 40px;
   <div class="kicker reveal">Projects</div>
   <h2 class="reveal">Side Projects, Come up and Solutions.</h2>
   <div class="res-list">
-    <div class="res-row reveal" data-toast="Opening: Home security lab write-up…"><div><div class="t">Mobile App - Hiram</div><div class="d">Designed and built a cross-platform debt-tracking app (Expo/React Native + TypeScript front end with a custom REST API and MySQL database) that lets users manage money owed to them. Tracking debtors, debts, due dates, and partial payments, with dashboard analytics for outstanding, overdue, and collected amounts.</div></div><span class="arrow">→</span></div>
-    <div class="res-row reveal" data-toast="Opening: Web vulnerability assessment…"><div><div class="t">Web vulnerability assessment</div><div class="d">A full OWASP Top 10 pass against a deliberately vulnerable app, with remediation notes.</div></div><span class="arrow">→</span></div>
-    <div class="res-row reveal" data-toast="Opening: Log analysis pipeline…"><div><div class="t">Windows cleaning - Software</div><div class="d">Built a lightweight Windows disk-cleanup utility in C# / .NET 10 spanning a WPF desktop app (MVVM) and a command-line tool (`wclean`) over a single shared core engine. Implemented safe, selective deletion of temp files with a centralized `PathGuard` that blocks path-traversal and symlink-escape attacks, plus scheduling via Windows Task Scheduler. Covered by a 130-case xUnit test suite.</div></div><span class="arrow">→</span></div>
-    <div class="res-row reveal" data-toast="Opening: Phishing awareness module…"><div><div class="t">NBA Prediction - ML Application</div><div class="d">Built a ML application that predicts NBA game outcomes using XGBoost, served end-to-end via a FastAPI backend and a Next.js + Tailwind CSS frontend. Architected a complete data pipeline that ingests real NBA statistics from stats.nba.com into PostgreSQL.</div></div><span class="arrow">→</span></div>
+    <div class="res-row reveal" data-toast="Opening: Home security lab write-upâ€¦"><div><div class="t">Mobile App - Hiram</div><div class="d">Designed and built a cross-platform debt-tracking app (Expo/React Native + TypeScript front end with a custom REST API and MySQL database) that lets users manage money owed to them. Tracking debtors, debts, due dates, and partial payments, with dashboard analytics for outstanding, overdue, and collected amounts.</div></div><span class="arrow">â†’</span></div>
+    <div class="res-row reveal" data-toast="Opening: Web vulnerability assessmentâ€¦"><div><div class="t">Web vulnerability assessment</div><div class="d">A full OWASP Top 10 pass against a deliberately vulnerable app, with remediation notes.</div></div><span class="arrow">â†’</span></div>
+    <div class="res-row reveal" data-toast="Opening: Log analysis pipelineâ€¦"><div><div class="t">Windows cleaning - Software</div><div class="d">Built a lightweight Windows disk-cleanup utility in C# / .NET 10 spanning a WPF desktop app (MVVM) and a command-line tool (`wclean`) over a single shared core engine. Implemented safe, selective deletion of temp files with a centralized `PathGuard` that blocks path-traversal and symlink-escape attacks, plus scheduling via Windows Task Scheduler. Covered by a 130-case xUnit test suite.</div></div><span class="arrow">â†’</span></div>
+    <div class="res-row reveal" data-toast="Opening: Phishing awareness moduleâ€¦"><div><div class="t">NBA Prediction - ML Application</div><div class="d">Built a ML application that predicts NBA game outcomes using XGBoost, served end-to-end via a FastAPI backend and a Next.js + Tailwind CSS frontend. Architected a complete data pipeline that ingests real NBA statistics from stats.nba.com into PostgreSQL.</div></div><span class="arrow">â†’</span></div>
   </div>
 </section>
 
@@ -359,9 +361,9 @@ footer{border-top:1px solid var(--line2);padding:56px clamp(20px,6vw,80px) 40px;
   <div class="kicker reveal">Learning</div>
   <h2 class="reveal">Always mid-study on something.</h2>
   <div class="quotes">
-    <div class="quote reveal"><p>Currently working through building security related web applications — building the blue-team muscle to match the red.</p><div class="who"><div class="av">SC</div><span>Security Construction · in progress</span></div></div>
-    <div class="quote reveal"><p>Coursework capstone: Built the security of the Web application.</p><div class="who"><div class="av">CS</div><span>Capstone · this semester</span></div></div>
-    <div class="quote reveal"><p>Next certification target: Security Related Certification, scheduled once the capstone is done.</p><div class="who"><div class="av">S+</div><span>Security · planned</span></div></div>
+    <div class="quote reveal"><p>Currently working through building security related web applications â€” building the blue-team muscle to match the red.</p><div class="who"><div class="av">SC</div><span>Security Construction Â· in progress</span></div></div>
+    <div class="quote reveal"><p>Coursework capstone: Built the security of the Web application.</p><div class="who"><div class="av">CS</div><span>Capstone Â· this semester</span></div></div>
+    <div class="quote reveal"><p>Next certification target: Security Related Certification, scheduled once the capstone is done.</p><div class="who"><div class="av">S+</div><span>Security Â· planned</span></div></div>
   </div>
 </section>
 
@@ -399,24 +401,24 @@ footer{border-top:1px solid var(--line2);padding:56px clamp(20px,6vw,80px) 40px;
       <a data-toast="You checked here. Thanks!">Coming Soon!</a>
     </div>
   </div>
-  <div class="foot-note"><span>© 2026 J._seph Built with curiosity.</span><span>Securing the digital world.</span></div>
+  <div class="foot-note"><span>Â© 2026 J._seph Built with curiosity.</span><span>Securing the digital world.</span></div>
 </footer>
 
 <div class="modal-back" id="mback">
   <div class="modal" id="modal">
-    <button class="x" id="mclose" aria-label="Close">✕</button>
+    <button class="x" id="mclose" aria-label="Close">âœ•</button>
     <h3 id="mtitle">Get in touch</h3>
-    <p id="mdesc">Find me on any of these — I reply fastest on email.</p>
+    <p id="mdesc">Find me on any of these â€” I reply fastest on email.</p>
     <div class="socials">
-      <a class="soc" href="mailto:cavaneyrojosephberganio@gmail.com" data-toast="Opening your email client…">
+      <a class="soc" href="mailto:cavaneyrojosephberganio@gmail.com" data-toast="Opening your email clientâ€¦">
         <span class="si"><svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor"><path d="M1 4h18v12H1zm2 2v8h14V6zm1.5 1.2L10 11l5.5-3.8.9 1.3L10 13.2 3.6 8.5z"/></svg></span>
         <span class="sh"><b>Email</b><span>cavaneyrojosephberganio@gmail.com</span></span>
-        <span class="arr">→</span>
+        <span class="arr">â†’</span>
       </a>
       <a class="soc" href="#" data-toast="https://github.com/SneakySep">
         <span class="si"><svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1a9 9 0 00-2.85 17.55c.45.08.62-.2.62-.44v-1.7c-2.5.55-3.03-1.06-3.03-1.06-.41-1.04-1-1.32-1-1.32-.82-.56.06-.55.06-.55.9.06 1.38.93 1.38.93.8 1.38 2.11.98 2.63.75.08-.58.31-.98.57-1.2-2-.23-4.1-1-4.1-4.45 0-.98.35-1.79.93-2.42-.1-.23-.4-1.15.09-2.4 0 0 .75-.24 2.47.92a8.5 8.5 0 014.5 0c1.71-1.16 2.46-.92 2.46-.92.49 1.25.19 2.17.1 2.4.58.63.92 1.44.92 2.42 0 3.47-2.1 4.22-4.11 4.44.32.28.61.83.61 1.68v2.5c0 .24.16.53.62.44A9 9 0 0010 1z"/></svg></span>
         <span class="sh"><b>GitHub</b><span>Code, projects and write-ups</span></span>
-        <span class="arr">→</span>
+        <span class="arr">â†’</span>
       </a>
     </div>
     <div class="fine">Links open in a new tab once real URLs are added.</div>
@@ -424,10 +426,10 @@ footer{border-top:1px solid var(--line2);padding:56px clamp(20px,6vw,80px) 40px;
 </div>
 
 <div class="player" id="player">
-  <h4>Ambient player <button class="x" id="playerClose" aria-label="Close player">✕</button></h4>
-  <div class="now" id="trackName">Night Compile</div>
-  <div class="mood" id="trackMood">slow synth pads · for late-night focus</div>
-  <div class="bars" id="eqBars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <h4>Now playing <button class="x" id="playerClose" aria-label="Close player">âœ•</button></h4>
+  <div class="now" id="trackName">I Understand â€” Drake</div>
+  <div class="mood" id="trackMood">via YouTube Â· plays in the embedded player below</div>
+  <div id="ytFrame"></div>
   <div class="prow">
     <button class="pbtn" id="prevBtn" aria-label="Previous track" title="Previous">
       <svg width="13" height="13" viewBox="0 0 20 20" fill="currentColor"><path d="M5 3h2v14H5zM17 3v14L7 10z"/></svg>
@@ -438,9 +440,8 @@ footer{border-top:1px solid var(--line2);padding:56px clamp(20px,6vw,80px) 40px;
     <button class="pbtn" id="nextBtn" aria-label="Next track" title="Next">
       <svg width="13" height="13" viewBox="0 0 20 20" fill="currentColor"><path d="M13 3h2v14h-2zM3 3l10 7-10 7z"/></svg>
     </button>
-    <input type="range" id="volSlider" min="0" max="100" value="45" aria-label="Volume">
   </div>
-  <div class="fine">Generated live with the Web Audio API — no files, no autoplay until you press play.</div>
+  <div class="fine">Tracks stream from YouTube. Playback controls live in the video frame.</div>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -701,104 +702,64 @@ themeBtn.addEventListener("click", function(){
   applyTheme(document.documentElement.getAttribute("data-theme") !== "dark");
 });
 
-/* ---------- music player (Web Audio, generative lo-fi) ---------- */
+/* ---------- music player (YouTube embeds) ---------- */
 var musicBtn = document.getElementById("musicBtn");
 var player = document.getElementById("player");
 var playBtn = document.getElementById("playBtn");
-var playIcon = document.getElementById("playIcon");
 var prevBtn = document.getElementById("prevBtn");
 var nextBtn = document.getElementById("nextBtn");
-var volSlider = document.getElementById("volSlider");
 var trackName = document.getElementById("trackName");
 var trackMood = document.getElementById("trackMood");
-var eqBars = document.getElementById("eqBars");
-
-var PLAY = "M5 3l12 7-12 7z";
-var PAUSE = "M4 3h4v14H4zM12 3h4v14h-4z";
 
 var TRACKS = [
-  {name:"Night Compile", mood:"slow synth pads · for late-night focus", root:110, scale:[0,3,5,7,10], tempo:.9, wave:"sine",    padGain:.05, arpGain:.05},
-  {name:"Terminal Rain", mood:"soft plucks · rain on the window",       root:98,  scale:[0,2,3,7,8],  tempo:.55, wave:"triangle", padGain:.04, arpGain:.07},
-  {name:"Packet Drift",  mood:"warm drones · deep-work ambience",       root:123.47, scale:[0,2,5,7,9], tempo:.7, wave:"sine",   padGain:.06, arpGain:.04},
-  {name:"Firewall Lullaby", mood:"gentle bells · wind-down mode",       root:87.31, scale:[0,3,7,10,14], tempo:.45, wave:"triangle", padGain:.05, arpGain:.06}
+  {id:"V-iPACQl1xE", name:"I Understand", artist:"Drake"},
+  {id:"qAsHVwl-MU4", name:"Ghost Town",   artist:"Kanye West"},
+  {id:"iSBVeZrDfGY", name:"Purple Rain",  artist:"Prince"}
 ];
+var ytIdx = 0, ytPlayer = null, ytReady = false, ytWanted = null;
 
-var audio = {ctx:null, master:null, playing:false, idx:0, timers:[], nodes:[]};
-
-function stopAudio(){
-  audio.timers.forEach(clearTimeout);
-  audio.timers = [];
-  audio.nodes.forEach(function(n){ try{ n.stop ? n.stop() : n.disconnect(); }catch(e){} });
-  audio.nodes = [];
-  if(audio.ctx){ audio.ctx.close(); audio.ctx = null; }
-  audio.playing = false;
-  playIcon.setAttribute("d", PLAY);
-  player.classList.remove("playing");
-  musicBtn.classList.remove("playing");
+function ytState(){
+  try{ return ytPlayer ? ytPlayer.getPlayerState() : -1; }catch(e){ return -1; }
 }
-
-function note(g, ctx, freq, dur, type, when){
-  var o = ctx.createOscillator(), gn = ctx.createGain();
-  o.type = type; o.frequency.value = freq;
-  gn.gain.setValueAtTime(0, when);
-  gn.gain.linearRampToValueAtTime(g, when + .04);
-  gn.gain.exponentialRampToValueAtTime(.0001, when + dur);
-  o.connect(gn); gn.connect(audio.master);
-  o.start(when); o.stop(when + dur + .05);
-  audio.nodes.push(o);
+function isPlaying(){ return ytState() === 1; }
+function refreshPlayIcon(){
+  playIcon.setAttribute("d", isPlaying() ? PAUSE : PLAY);
+  player.classList.toggle("playing", isPlaying());
+  musicBtn.classList.toggle("playing", isPlaying());
 }
-
-function startAudio(){
-  var C = window.AudioContext || window.webkitAudioContext;
-  audio.ctx = new C();
-  var ctx = audio.ctx;
-  audio.master = ctx.createGain();
-  audio.master.gain.value = volSlider.value / 100 * .9;
-  audio.master.connect(ctx.destination);
-  audio.nodes.push(audio.master);
-  var t = TRACKS[audio.idx];
-
-  // slow pad: two detuned oscillators on the root, retriggered every few seconds
-  function pad(){
-    var when = ctx.currentTime + .05;
-    [t.root, t.root*1.5, t.root*2].forEach(function(f, k){
-      var o = ctx.createOscillator(), gn = ctx.createGain();
-      o.type = "sine"; o.frequency.value = f * (k===1 ? 1.002 : 1);
-      gn.gain.setValueAtTime(0, when);
-      gn.gain.linearRampToValueAtTime(t.padGain, when + 1.2);
-      gn.gain.linearRampToValueAtTime(0, when + 4.4);
-      o.connect(gn); gn.connect(audio.master);
-      o.start(when); o.stop(when + 4.6);
-      audio.nodes.push(o);
+function showTrack(){
+  var t = TRACKS[ytIdx];
+  trackName.textContent = t.name + " — " + t.artist;
+  trackMood.textContent = "via YouTube · track " + (ytIdx+1) + " of " + TRACKS.length;
+}
+function mountPlayer(){
+  if(!ytReady || ytWanted === null) return;
+  var id = TRACKS[ytWanted].id;
+  ytWanted = null;
+  if(ytPlayer){
+    ytPlayer.loadVideoById(id);
+    ytPlayer.playVideo();
+  } else {
+    ytPlayer = new YT.Player("ytFrame", {
+      videoId: id,
+      playerVars: {rel:0, modestbranding:1},
+      events: {
+        onReady: function(e){ e.target.playVideo(); },
+        onStateChange: function(e){ refreshPlayIcon(); }
+      }
     });
-    audio.timers.push(setTimeout(pad, 4200));
   }
-  pad();
-
-  // sparse melody: random scale notes, gentle and unhurried
-  function arp(){
-    if(Math.random() < .82){
-      var deg = t.scale[Math.floor(Math.random()*t.scale.length)];
-      var oct = Math.random() < .3 ? 4 : 2;
-      note(t.arpGain, ctx, t.root * oct * Math.pow(2, deg/12), 1.6 + Math.random(), t.wave, ctx.currentTime + .05);
-    }
-    audio.timers.push(setTimeout(arp, (60/t.tempo) * 500 * (0.7 + Math.random()*.6)));
-  }
-  arp();
-
-  audio.playing = true;
-  playIcon.setAttribute("d", PAUSE);
-  player.classList.add("playing");
-  musicBtn.classList.add("playing");
+  showTrack();
 }
-
-function setTrack(i){
-  audio.idx = (i + TRACKS.length) % TRACKS.length;
-  var t = TRACKS[audio.idx];
-  trackName.textContent = t.name;
-  trackMood.textContent = t.mood;
-  if(audio.playing){ stopAudio(); startAudio(); }
-}
+window.onYouTubeIframeAPIReady = function(){
+  ytReady = true;
+  mountPlayer();
+};
+(function loadYT(){
+  var s = document.createElement("script");
+  s.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(s);
+})();
 
 musicBtn.addEventListener("click", function(){
   player.classList.toggle("open");
@@ -807,16 +768,22 @@ document.getElementById("playerClose").addEventListener("click", function(){
   player.classList.remove("open");
 });
 playBtn.addEventListener("click", function(){
-  if(audio.playing) stopAudio(); else startAudio();
+  if(!ytPlayer){ ytWanted = ytIdx; mountPlayer(); return; }
+  if(isPlaying()) ytPlayer.pauseVideo(); else ytPlayer.playVideo();
 });
-prevBtn.addEventListener("click", function(){ setTrack(audio.idx - 1); });
-nextBtn.addEventListener("click", function(){ setTrack(audio.idx + 1); });
-volSlider.addEventListener("input", function(){
-  if(audio.master) audio.master.gain.value = volSlider.value / 100 * .9;
+prevBtn.addEventListener("click", function(){
+  ytIdx = (ytIdx - 1 + TRACKS.length) % TRACKS.length;
+  ytWanted = ytIdx; mountPlayer();
+});
+nextBtn.addEventListener("click", function(){
+  ytIdx = (ytIdx + 1) % TRACKS.length;
+  ytWanted = ytIdx; mountPlayer();
 });
 document.addEventListener("keydown", function(e){
   if(e.key === "Escape") player.classList.remove("open");
 });
+setInterval(refreshPlayIcon, 500);
+showTrack();
 
 /* ---------- interactivity: nav, menu, modal, toast, reveal ---------- */
 var toastEl = document.getElementById("toast"), toastTimer;
